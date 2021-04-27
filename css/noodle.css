@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body{
+  
+  width: 1200px;
+  margin: 0 auto;
+}
+h1{
+  
+  font-size: 30px;
+  line-height: 3;
+}
+p{
+  
+  line-height: 1.5;
+}
+ol{
+  
+  margin-top: 20px;
+  overflow: hidden;
+  padding: 10px;
+}
+li{
+  outline: 1px solid;
+  float: left;
+  width: 33.3333%;
+  height: 200px;
+  text-align: center;
+  line-height: 200px;
+  transition: all 0.5s;
+}
+li:hover{
+  background-color: red;
+  color: #fff;
+  font-size: 40px;
+  transform: rotate(60deg);
+}
+hr{
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
