@@ -1,0 +1,488 @@
+@charset "UTF-8";
+body{
+  padding-top:110px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+/*------------------상단영역-------------------  */
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: #fff;
+}
+nav .wrapper{
+  max-width: 1800px;
+  margin: 0 auto;
+}
+nav .wrapper>a{
+  float: left;
+  margin-top: 22px;
+}
+nav .wrapper>a h1{
+  
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/GS_logo_%28South_Korean_company%29.svg/1280px-GS_logo_%28South_Korean_company%29.svg.png);
+  background-repeat: no-repeat;
+  width: 94px;
+  height: 40px;
+  text-indent: -9999px;
+  background-size: contain;
+  padding: 20px;
+}
+nav .wrapper span{
+  float: right;
+  margin-top: 50px;
+}
+nav .wrapper span input{
+  
+  width: 200px;
+}
+nav .wrapper span button{
+  
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+}
+nav .wrapper ul.list{
+  
+  text-align: center;
+}
+nav .wrapper ul.list>li{
+  
+  display: inline-block;
+  margin-top: 30px;
+  /*! margin-right: 40px; */
+  vertical-align: top;
+  width: 190px;
+  padding: 30px 0;
+}
+nav .wrapper ul.list>li>a{
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+/* 마우스오버시 밑줄효과 */
+nav .wrapper ul.list>li>a::after{
+ content: "";
+  width: 100%;
+  display: block;
+  border-bottom: 3px solid #0168b7;
+  transform: scale(0);
+  transition: transform 0.5s linear;
+  position: absolute;
+  bottom: -15px;
+  left: 2px;
+  z-index: 2;
+}
+nav .wrapper ul.list>li>a:hover::after{
+ transform: scaleX(1);
+}
+
+nav .wrapper ul.list:hover .bg{
+ display: initial;
+ animation-name: menuani;
+ animation-duration: 0.3s;
+ animation-iteration-count:1;
+ transform-origin:50% 0;
+}
+@keyframes menuani{
+  0%{
+    opacity: 0.8;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/* 서브메뉴 */
+nav .wrapper ul.list .bg{
+  display: none;
+  width: 1800px;
+  padding: 40px 0;
+  position: absolute;
+  top: 95px;
+  left: 52px;
+  background-color: #fff;
+  z-index: 1;
+}
+nav .wrapper ul.list .bg .center{
+  width: 1200px;
+  margin: 0 270px;
+}
+nav .wrapper ul.list .bg .center ul{ 
+  display: inline-block;
+  vertical-align: top;
+}
+nav .wrapper ul.list .bg .center>ul>li{  
+  width: 190px;
+  text-align: left;
+  line-height: 2;
+}
+nav .wrapper ul.list .bg .center>ul>li>a{  
+  padding: 0;
+  font-size: 17px;
+  font-weight: lighter;
+}
+nav .wrapper ul.list .bg .center>ul>li>a:hover{
+  color: #0269b8;
+  text-decoration: underline;
+}
+
+/*------------------타이틀영역-------------------  */
+.w1800{
+  width: 1800px;
+  margin: 0 auto;
+}
+#title{
+
+}
+#title .w1800{
+  background-image: url(../img/title1.jpg);
+  min-height: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 50px;
+  position: relative;
+}
+#title .w1800 .text{
+  
+}
+
+#title .w1800 .text h2{
+  
+  font-size: 45px;
+  color: #fff;
+  padding: 315px 100px 15px;
+  font-weight: 900;
+}
+#title .w1800 .text p{
+  padding: 10px 100px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+#title .w1800 .scroll_icon{
+
+}
+#title .w1800 .scroll_icon img{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  animation-name: motion;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes motion{
+  0%{
+    transform: translateY(-15px);
+  }
+  100%{
+    transform: translateY(15px);
+  }
+}
+ 
+
+/*------------------컨텐츠영역-------------------  */
+#contents{
+  
+}
+/*------------------사업부문-------------------  */
+.w1200{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.w1200 h2{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+}
+.w1200>h3{
+  text-align: center;
+  margin: 20px;
+  font-size: 20px;
+  color: #676767;
+}
+.btn{
+  border: 1px solid #000;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 50px;
+  transition-duration: 2s;
+  margin: 0 auto;
+}
+.btn:hover{
+  background-color: #0269b8;
+}
+
+.btn a{
+  
+}
+/* 사업부분 공통 스타일 */
+
+.w1200 .part{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w1200 .part>div{
+  text-align: center;
+  margin-right: 10px;
+}
+.w1200 .part>div a{
+  
+}
+.w1200 .part>div a img{
+  width: 350px;
+  background-size: cover;
+}
+.w1200 .part>div a img:hover {
+  transform: scale(1.1);
+  transition: transform .5s ease;
+  box-shadow: 9px 7px 15px rgba(100, 100, 100, 0.37);
+}
+.w1200 .part>div a .inner {
+  
+  height: 230px;
+  margin-bottom: 30px;
+}
+.w1200 .part>div a .inner  span{
+  font-size: 14px;
+  padding: 30px;
+  line-height: 3;
+}
+.w1200 .part>div a .inner  h3{
+  padding: 10px 30px;
+  font-size: 21px;
+  font-weight: bold;
+}
+.w1200 .part>div a .inner  ul{
+  
+  text-align: center;
+}
+.w1200 .part>div a .inner  ul li{
+  display: inline-block;
+  line-height: 2;
+  padding-left: 15px;
+  font-size: 17px;
+}
+
+.w1200 .part>div a .inner p{
+  text-align: left;
+  border-top: 1px solid #ccc;
+  line-height: 1.5;
+  margin-top: 10px;
+  font-size: 17px;
+  padding: 0 30px;
+  color: #676767;
+}
+
+/*------------------인재채용-------------------  */
+#contents .recruit{
+  margin-top: 20px;
+  position: relative;
+  height: 700px;
+}
+#contents .recruit::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #f6f6f6;
+  z-index: -1;
+}
+#contents .recruit h2{
+  
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+}
+#contents .recruit .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+#contents .recruit .container .textbox{
+  
+  width: 49%;
+  margin-right: 1%;
+  text-align: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url(../img/recruit.jpg);
+  background-size: cover;
+}
+#contents .recruit .container .textbox h3{
+
+  font-size: 22px;
+  padding: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+#contents .recruit .container .textbox p{
+
+  line-height: 2;
+  color: #fff;
+}
+#contents .recruit .container .textbox a{
+  
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 150px;
+  height: 50px;
+  margin: 0 auto;
+  line-height: 50px;
+  border: 1px solid;
+  color: #fff;
+}
+#contents .recruit .container .reimg{
+  
+  background-image: url(../img/interview.jpg);
+  width: 50%;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: right;
+  background-position: center;
+}
+/* gs뉴스기사 공통 스타일 */
+[class*="article"]{
+  
+  width: 300px;
+  height: 300px;
+}
+#contents .news .right>div a{
+  
+}
+#contents .news .right>div a>div h2{
+  line-height: 1.5;
+  margin-top: 30px;
+  height
+;
+  height: 50px;
+}
+#contents .news .right>div a>div p{
+  color: #41545f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 15px;
+  line-height: 1.5;
+  float: right;
+}
+#contents .news span{
+  
+}
+#contents .news .right>div>a img{
+  
+  width: 300px;
+  height: 200px;
+}
+#contents .news .right>div>a>div{
+  
+
+}
+/*------------------gs뉴스-------------------  */
+#contents .news{
+
+  overflow: hidden;
+}
+#contents .news .left{
+  width: 40%;
+  height: 700px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0069b9;
+}
+#contents .news .left h2{
+  font-size: 50px;
+  font-weight: bold;
+  color: #Fff;
+}
+#contents .news .left p{
+  
+  margin: 50px 50px 0;
+  line-height: 2;
+  color: #Fff;
+}
+#contents .news .right{
+  float: right;
+  width: 60%;
+  height: 700px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* 하단영역 */
+#footer{
+  background-color: #464545;
+  clear: both;
+  overflow: hidden;
+}
+
+#footer ul{
+  
+  display: flex;
+  margin: 40px;
+}
+#footer ul li{
+  
+}
+#footer ul>li>a{
+  padding: 30px;
+  color: #fff;
+
+}
+#footer .link{
+  
+  overflow: hidden;
+  float: right;
+  margin-right: 60px;
+}
+#footer .link select{
+  
+  width: 180px;
+  height: 35px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+#footer .link select option{
+  
+}
+#footer address{
+  
+  color: #fff;
+  font-style: normal;
+  line-height: 2;
+  margin-left: 90px;
+}
+#footer>p{
+  
+  margin-left: 90px;
+  color: #Fff;
+  margin-bottom: 30px;
+}
+
